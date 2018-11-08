@@ -2,9 +2,9 @@ pragma solidity ^0.4.24;
 
 library Safemath {
   function add(uint _a, uint _b) public pure returns (uint){
-    // require(2**256 - 1 - _a > _b);
     uint sum = _a + _b;
     require(sum >= _a && sum >= _b);
+
     return sum;
   }
 
